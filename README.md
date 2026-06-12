@@ -1,9 +1,5 @@
 # Web pages for the 'ML Fika' Machine Learning Seminar at KTH
 
-ML Fika is a machine learning seminar series at KTH Royal Institute of Technology,
-jointly organised by the RPL (Robotics, Perception and Learning) and CLS divisions
-at the School of Electrical Engineering and Computer Science (EECS).
-
 This web page uses Jekyll through GitHub Pages, which renders static HTML pages. The
 layout auto-supports various screen sizes through Bootstrap.
 
