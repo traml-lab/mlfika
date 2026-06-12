@@ -16,9 +16,9 @@ exclude:
   - .sass-cache
 
 title: "Machine Learning Fika"
-description: "A Machine Learning Seminar Series at KTH"
+description: "Machine Learning Seminar Series at KTH"
 
-information: "**Machine Learning Fika** (ML Fika) is a seminar series at KTH Royal Institute of Technology featuring invited talks across the breadth of machine learning research. It is jointly organised by the **RPL** and **CLS** divisions at the School of Electrical Engineering and Computer Science (EECS)."
+information: "**Machine Learning Fika** (ML Fika) is a seminar series at KTH Royal Institute of Technology featuring invited talks across the breadth of machine learning research. It is jointly organised by the **RPL** and **CLS** departments at the School of Electrical Engineering and Computer Science (EECS)."
 
 # Link to the registration / signup form. Leave empty to show "Registration closed".
 registration: ""
