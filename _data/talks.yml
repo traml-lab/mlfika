@@ -1,0 +1,25 @@
+# ML Fika talks.
+#
+# Add one entry per talk. Only `date` and `title` are required; the rest are
+# optional. If `abstract` or `biography` is given, the entry shows an
+# "Abstract & bio" toggle that expands the details. Photos are intentionally
+# not used.
+#
+# Talks automatically move from "Upcoming" to "Past" one hour after their
+# scheduled time, so keep the `date` parseable (e.g. "September 04, 2026 at 3 pm CEST").
+#
+# - date: September 04, 2026 at 3 pm CEST
+#   title: "Title of the talk"
+#   presenter: "Speaker Name"
+#   url: https://speaker-homepage.example
+#   affiliation: "Their Institution"
+#   abstract: "One or two paragraphs describing the talk. Markdown links work."
+#   biography: "A short bio of the speaker."
+
+- date: September 04, 2026 at 3 pm CEST
+  title: "Sample talk — replace me once the first speaker is confirmed"
+  presenter: "Sample Speaker"
+  url: https://trappmartin.github.io
+  affiliation: "KTH Royal Institute of Technology"
+  abstract: "This is a placeholder entry showing how a talk is displayed on the ML Fika page. The compact list shows the date, speaker, affiliation and title; clicking **Abstract & bio** reveals this abstract together with the speaker's short biography. Replace this entry in `_data/talks.yml` with real talks as speakers confirm."
+  biography: "A short biography of the speaker goes here — a couple of sentences on their background and research interests is plenty."

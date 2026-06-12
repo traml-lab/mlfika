@@ -1,0 +1,156 @@
+---
+layout: default
+---
+
+<div class="jumbotron jumbotron-fluid bg-dark banner">
+
+  <div class="jumbotron-background">
+    <img src="{{ site.baseurl }}/assets/background.jpg" class="blur" />
+  </div>
+
+  <div class="container text-white">
+    <div class="page-heading">
+      <div class="title-row">
+        <img src="{{ site.baseurl }}/assets/kth-logo.png" class="header-logo" alt="KTH" />
+        <h1>{{ site.title }}</h1>
+      </div>
+      <hr class="small">
+      <span class="page-subheading">{{ site.description }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="container-md">
+
+<div class="row">
+
+<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+
+<!-- Information -->
+
+<div class="jumbotron information">
+  {{ site.information | markdownify }}
+  <div class="text-center">
+    <a class="btn btn-success btn-lg register-btn" href="{{ site.registration }}">{% if site.registration != "" %}Register for the seminar{% else %}Registration closed{% endif %}</a>
+  </div>
+  {{ site.details | markdownify }}
+  <div id="hosted-by">Organised by {{ site.organizers | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+</div>
+
+
+<div class="posts-list" id="talk-list">
+
+<!-- List talks -->
+
+{% for talk in site.data.talks %}
+
+  {% assign datepart = talk.date | split: " at " | first %}
+  <article class="post-preview" datetime="{{ talk.date | date: "%s" }}">
+    <div class="talk-row">
+      <div class="talk-date">
+        <span class="talk-day">{{ datepart | date: "%-d" }}</span>
+        <span class="talk-monthyear">{{ datepart | date: "%b %Y" }}</span>
+      </div>
+      <div class="talk-body">
+        {% if talk.date contains " at " %}
+        <p class="post-meta">{{ talk.date | split: " at " | last }}{% if talk.location %} &middot; {{ talk.location }}{% endif %}</p>
+        {% elsif talk.location %}
+        <p class="post-meta">{{ talk.location }}</p>
+        {% endif %}
+        <h2 class="post-title">
+          {% if talk.presenter %}<span class="post-speaker">{% if talk.url %}<a href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.presenter }}</a>{% else %}{{ talk.presenter }}{% endif %}</span>{% if talk.affiliation %} <span class="post-affil">({{ talk.affiliation }})</span>{% endif %} <span class="post-dash">&mdash;</span> {% endif %}{{ talk.title }}
+        </h2>
+        {% if talk.abstract or talk.biography %}
+        <button class="expand-btn" type="button" aria-expanded="false">
+          <span class="expand-label">Abstract &amp; bio</span>
+          <i class="fa fa-chevron-down expand-chevron"></i>
+        </button>
+        <div class="post-details">
+          {% if talk.abstract %}
+          <div class="post-entry">
+            <p><strong>Abstract.</strong>
+            {{ talk.abstract | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          </div>
+          {% endif %}
+          {% if talk.biography %}
+          <div class="post-bio text-muted">
+            <p><strong>About the speaker.</strong>
+            {{ talk.biography | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+
+{% endfor %}
+
+</div>
+
+<div class="posts-list" id="past-talks">
+</div>
+
+{% if site.related %}
+<div class="related-seminars">
+  <hr>
+  <h2>Related seminars</h2>
+  <ul class="related-list">
+    {% for seminar in site.related %}
+    <li>
+      <a href="{{ seminar.url }}" target="_blank" rel="noopener">{{ seminar.name }}</a>{% if seminar.note %} <span class="related-note">&mdash; {{ seminar.note }}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ site.baseurl }}/assets/vendor/jquery/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+
+    // Move a talk to "Past talks" one hour after its scheduled time.
+    var currentTime = Math.floor(Date.now() / 1000) + 2 * 3600;
+
+    $("#talk-list").prepend("<h2>Upcoming talks</h2>");
+
+    // Sort upcoming talks so the next one is first.
+    $("#talk-list article")
+      .sort((a, b) => $(a).attr("datetime") - $(b).attr("datetime"))
+      .appendTo("#talk-list");
+
+    // Find and relocate past talks.
+    var $past = $("#talk-list article").filter(function() {
+      return parseInt($(this).attr("datetime")) < currentTime;
+    });
+
+    if ($past.length) {
+      $("#past-talks").prepend("<br /><hr><br /><h2>Past talks</h2>");
+      $past.appendTo("#past-talks");
+
+      // Most recent past talk first.
+      $("#past-talks article")
+        .sort((a, b) => $(b).attr("datetime") - $(a).attr("datetime"))
+        .appendTo("#past-talks");
+    }
+
+    // Collapse details by default (progressive enhancement: visible without JS),
+    // then wire up the expand/collapse toggle.
+    $(".post-details").hide();
+
+    $(".expand-btn").on("click", function() {
+      var $btn = $(this);
+      var expanded = $btn.attr("aria-expanded") === "true";
+      $btn.attr("aria-expanded", !expanded);
+      $btn.closest("article").find(".post-details").slideToggle(180);
+    });
+
+  });
+</script>

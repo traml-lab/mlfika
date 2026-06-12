@@ -1,0 +1,37 @@
+
+# Set this to the path your site is served from on GitHub Pages.
+# For a project page (e.g. https://<org>.github.io/ml-fika) use "/ml-fika".
+# For local preview run: jekyll serve --baseurl ""
+baseurl: ""
+color-scheme: "#004791" # KTH blue. Any HEX code works, e.g. "#00aa55".
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _pages
+
+exclude:
+  - .sass-cache
+
+title: "Machine Learning Fika"
+description: "A Machine Learning Seminar Series at KTH"
+
+information: "**Machine Learning Fika** (ML Fika) is a seminar series at KTH Royal Institute of Technology featuring invited talks across the breadth of machine learning research. It is jointly organised by the **RPL** and **CLS** divisions at the School of Electrical Engineering and Computer Science (EECS)."
+
+# Link to the registration / signup form. Leave empty to show "Registration closed".
+registration: ""
+
+details: "Each session features an invited talk followed by discussion. The schedule is given in Central European (Summer) Time. The seminar series starts after the summer break — we are currently inviting speakers, so check back soon for the schedule."
+
+organizers: "[Martin Trapp](https://trappmartin.github.io) and [Hossein Azizpour](https://www.kth.se/profile/azizpour)"
+
+# Previous / related seminar series, listed at the bottom of the page.
+related:
+  - name: "Machine Learning Seminars at KTH (CVAP/CVG)"
+    note: "previously organised by Hossein Azizpour"
+    url: "https://www.csc.kth.se/cvap/cvg/ml-seminars/"
+  - name: "Advances in Probabilistic Machine Learning (APML)"
+    note: "Aalto University & ELLIS Helsinki, co-organised by Martin Trapp"
+    url: "https://aaltoml.github.io/apml/"
