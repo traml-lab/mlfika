@@ -2,7 +2,7 @@
 # Set this to the path your site is served from on GitHub Pages.
 # For a project page (e.g. https://<org>.github.io/ml-fika) use "/ml-fika".
 # For local preview run: jekyll serve --baseurl ""
-baseurl: "/ml-fika"
+baseurl: "https://traml-lab.github.io/mlfika"
 color-scheme: "#004791" # KTH blue. Any HEX code works, e.g. "#00aa55".
 
 sass:
