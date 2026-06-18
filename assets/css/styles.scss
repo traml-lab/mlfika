@@ -88,6 +88,19 @@ img.blur {
     margin-bottom: 1.2rem;
 }
 
+.interest-link {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    color: {{ site.color-scheme }};
+    text-decoration: underline;
+}
+
+.interest-link:hover,
+.interest-link:focus {
+    text-decoration: none;
+}
+
 #hosted-by {
     text-align: right;
     margin-top: 1.875rem;

@@ -34,6 +34,11 @@ layout: default
     <a class="btn btn-success btn-lg register-btn" href="{{ site.registration }}">{% if site.registration != "" %}Register for the seminar{% else %}Registration closed{% endif %}</a>
   </div>
   {{ site.details | markdownify }}
+  {% if site.interest_form != "" %}
+  <div class="text-center">
+    <a class="interest-link" href="{{ site.interest_form }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Expression of Interest to Present <i class="fa fa-hand-o-left" aria-hidden="true"></i></a>
+  </div>
+  {% endif %}
   <div id="hosted-by">Organised by {{ site.organizers | markdownify | remove: '<p>' | remove: '</p>' }}</div>
 </div>
 
