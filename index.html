@@ -39,6 +39,7 @@ layout: default
     <a class="interest-link" href="{{ site.interest_form }}"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Expression of Interest to Present <i class="fa fa-hand-o-left" aria-hidden="true"></i></a>
   </div>
   {% endif %}
+  {{ site.scope | markdownify }}
   <div id="hosted-by">Organised by {{ site.organizers | markdownify | remove: '<p>' | remove: '</p>' }}</div>
 </div>
 

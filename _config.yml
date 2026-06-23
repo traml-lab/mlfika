@@ -29,6 +29,8 @@ interest_form: "https://forms.gle/S8XnyJXZJtBWBaeS6"
 
 details: "Each session features an invited talk (30 min + 15 min Q&A) **live over Zoom & physically at CLS/RPL**, preceded by an introduction to the field. The talks will not be recorded unless the speaker separately requests it. The schedule is in Central European (Summer) Time. The seminar series starts after the summer break — so check back soon for the schedule."
 
+scope: "**The scope of the seminar series** ranges from _generative models_, _statistical machine learning_, and _machine learning theory_ to applications in _drug discovery_, _computer vision_, and _robotics_."
+
 organizers: "[Martin Trapp](https://trappmartin.github.io) and [Hossein Azizpour](https://www.kth.se/profile/azizpour)"
 
 # Previous / related seminar series, listed at the bottom of the page.
