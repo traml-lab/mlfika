@@ -18,7 +18,7 @@ exclude:
 title: "Machine Learning Fika"
 description: "Machine Learning Seminar Series at KTH"
 
-information: "**Machine Learning Fika** (ML Fika) is a seminar series at KTH Royal Institute of Technology featuring invited talks across the field of machine learning research. It is jointly organised by Martin Trapp and Hossein Azizpour at the School of Electrical Engineering and Computer Science (EECS). This seminar series provides a platform for young researchers (PhD student or post-doc level) to give invited talks about their research."
+information: "**Machine Learning Fika** (ML Fika) is a seminar series at KTH Royal Institute of Technology featuring invited talks across the field of machine learning research. It is jointly organised by Martin Trapp and Hossein Azizpour at the School of Electrical Engineering and Computer Science (EECS). This seminar series provides a platform for young researchers (PhD students or post-doc level) to give invited talks about their research."
 
 # Link to the registration / signup form. Leave empty to show "Registration closed".
 registration: "https://forms.gle/jaoYhpxJS6TrHPMk9"
@@ -27,7 +27,7 @@ registration: "https://forms.gle/jaoYhpxJS6TrHPMk9"
 # Leave empty to hide the link.
 interest_form: "https://forms.gle/S8XnyJXZJtBWBaeS6"
 
-details: "Each session features an invited talk (30 min + 15 min Q&A) **live over Zoom & physically at CBL/RPL**, preceded by an introduction into the field. The the talks will not be recorded unless the speaker separately requests for it. The schedule is in Central European (Summer) Time. The seminar series starts after the summer break — so check back soon for the schedule."
+details: "Each session features an invited talk (30 min + 15 min Q&A) **live over Zoom & physically at CLS/RPL**, preceded by an introduction to the field. The talks will not be recorded unless the speaker separately requests it. The schedule is in Central European (Summer) Time. The seminar series starts after the summer break — so check back soon for the schedule."
 
 organizers: "[Martin Trapp](https://trappmartin.github.io) and [Hossein Azizpour](https://www.kth.se/profile/azizpour)"
 
